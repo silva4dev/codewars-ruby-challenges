@@ -1,9 +1,7 @@
 def duplicate_count(text)
   letters = []
   text.downcase.split("").each_with_index do |t, i|
-    if text.downcase.count(t) > 1
-      letters.push(t)
-    end
+    letters.append(t) if text.downcase.count(t) > 1
   end
   return letters.uniq.size
 end
